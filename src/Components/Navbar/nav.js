@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <header className="navbar-container">
-      {/* Top Bar */}
+  
       <div className="top-bar">
         <div className="logo">
           <img src={logo} alt="Healthy LYF Logo" />
@@ -28,7 +28,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Main Navigation and Contact Info */}
+    
       <nav className={`main-nav ${isOpen ? 'open' : ''}`}>
         <ul>
           <li><a href="#home">Home</a></li>

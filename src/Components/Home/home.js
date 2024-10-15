@@ -1,9 +1,8 @@
 import React from 'react';
 import './Home.css';
 import { FaLeaf, FaHeart } from 'react-icons/fa';
-import { Carousel } from 'react-responsive-carousel';  // Ensure to install react-responsive-carousel
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Carousel CSS
-
+import { Carousel } from 'react-responsive-carousel';  
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; 
 import img1 from '../Assets/sprout1.webp';
 import img2 from '../Assets/sprout2.webp';
 import img3 from '../Assets/sprout3.webp';
@@ -13,7 +12,7 @@ import heroBanner from '../Assets/hero-banner.jpg';
 import alfalfa from '../Assets/alfalfa.jpg';
 import broccoli from '../Assets/broccoli.jpg';
 import mungbean from '../Assets/mungbean.webp';
-import radish from '../Assets/radish.jpg'; // New sprout images
+import radish from '../Assets/radish.jpg'; 
 import clover from '../Assets/clover.jpg';
 import sunflower from '../Assets/sunflower.jpg';
 import pea from '../Assets/pea.jpg';
@@ -32,11 +31,11 @@ const quotes = [
 const Home = () => {
   return (
     <div className="home-container">
-      {/* Carousel Section */}
+   
       <Carousel 
         autoPlay 
         infiniteLoop 
-        interval={4000} // Slide every 4 seconds
+        interval={4000} 
         showThumbs={false}
         showStatus={false}
         dynamicHeight={false}
@@ -49,7 +48,7 @@ const Home = () => {
         ))}
       </Carousel>
 
-      {/* Hero Section */}
+     
       <section className="hero">
         <div className="hero-content">
           <h1>Fuel Your Health with Nature's Power</h1>
@@ -59,7 +58,7 @@ const Home = () => {
         <img src={heroBanner} alt="Fresh Sprouts Banner" className="hero-img" />
       </section>
 
-      {/* Product Preview Section */}
+      
       <section className="product-preview">
         <h2>Our Sprout Varieties</h2>
         <div className="sprout-card-container">
@@ -116,7 +115,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Health Benefits Section */}
+  
       <section className="health-benefits">
         <h2>Health Benefits of Sprouts</h2>
         <div className="benefit-container">
@@ -133,7 +132,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+     
       <section className="testimonials">
         <h2>What Our Customers Say</h2>
         <div className="testimonial-cards">
@@ -148,7 +147,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer Section */}
+
       <footer className="footer">
         <div className="footer-content">
           <p>Stay Updated with Our Latest Products</p>
