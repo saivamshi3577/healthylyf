@@ -1,0 +1,209 @@
+/* General Styling */
+.home-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background-color: #27ae60;
+  color: white;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.hero button {
+  background-color: white;
+  color: #27ae60;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero button:hover {
+  background-color: #2ecc71;
+}
+
+/* Carousel Styling */
+.carousel .slide img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.legend {
+  font-size: 3rem;
+  color: white;
+  background: none;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Product Preview Section */
+.product-preview {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.sprout-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sprout-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Ensure all cards have the same width */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sprout-card img {
+  width: 200px; /* Set a uniform width */
+  height: 200px; /* Set a uniform height */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.sprout-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.sprout-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Health Benefits Section */
+.health-benefits {
+  background-color: #e7f9e9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.benefit-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.benefit-item {
+  width: 200px;
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  color: #27ae60;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #27ae60;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer input {
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer button {
+  background-color: white;
+  color: #27ae60;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.footer button:hover {
+  background-color: #2ecc71;
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .sprout-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sprout-card {
+    width: 100%;
+    max-width: 300px; /* Adjust for smaller screens */
+  }
+
+  .benefit-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
