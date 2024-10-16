@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin-bottom: 30px;
+  }
+  
+  .contact-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .quote {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .quote h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .quote p {
+    font-size: 1.2rem;
+  }
+  
+  .contact-form-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  .input-error {
+    border-color: red;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.9rem;
+  }
+  
+  .submit-btn {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    background-color: #008000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #006400;
+  }
+  
+  @media (max-width: 768px) {
+    .quote h1 {
+      font-size: 2rem;
+    }
+  
+    .quote p {
+      font-size: 1rem;
+    }
+  
+    .contact-form-container {
+      padding: 15px;
+    }
+  
+    .submit-btn {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .quote h1 {
+      font-size: 1.8rem;
+    }
+  
+    .quote p {
+      font-size: 0.9rem;
+    }
+  
+    .contact-form-container {
+      padding: 10px;
+    }
+  }
+  

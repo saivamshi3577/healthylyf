@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaFacebook, FaPinterest, FaInstagram, FaBars } from 'react-icons/fa';
+import { Link } from 'react-router-dom'; 
 import logo from '../Assets/logo.png';
 
 const Navbar = () => {
@@ -41,13 +42,13 @@ const Navbar = () => {
       
       <nav className={`main-nav ${isOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#nutritions">Nutritions</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#shop">Shop</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/products">Products</Link></li>
+          <li><Link to="/nutritions">Nutritions</Link></li>
+          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/shop">Shop</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
         <div className="contact-info">
           <div><FaPhone /> <a href="tel:+919948004834">+91 9948004834</a></div>
