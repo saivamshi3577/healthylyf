@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaFacebook, FaPinterest, FaInstagram, FaBars } from 'react-icons/fa';
@@ -10,7 +7,7 @@ import logo from '../Assets/logo.png';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false); 
-  const menuRef = useRef(null);  // Create a ref for the menu
+  const menuRef = useRef(null);  
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -22,14 +19,14 @@ const Navbar = () => {
 
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setIsOpen(false);  // Close the menu if click is outside the menu
+      setIsOpen(false); 
     }
   };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
-    // Only listen for outside clicks if the menu is open
+   
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     } else {
@@ -38,7 +35,7 @@ const Navbar = () => {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('mousedown', handleClickOutside);  // Clean up the event listener
+      document.removeEventListener('mousedown', handleClickOutside); 
     };
   }, [isOpen]);
 

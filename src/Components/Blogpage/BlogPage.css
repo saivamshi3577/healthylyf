@@ -1,0 +1,138 @@
+/* BlogPage.css */
+.blog-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .blog-content {
+    flex: 3;
+  }
+  
+  .blog-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .blog-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .blog-details {
+    padding: 20px;
+  }
+  
+  .blog-date {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .blog-sidebar {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+  }
+  
+  .search-box {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .search-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .search-box button {
+    background-color: #ffc107;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    margin-left: -50px;
+    cursor: pointer;
+  }
+  
+  .sidebar-section {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .sidebar-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .latest-post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .latest-post img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .tags span {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    display: inline-block;
+    margin: 5px;
+  }
+  
+  /* Media queries for mobile responsiveness */
+  @media screen and (max-width: 768px) {
+    .blog-page {
+      flex-direction: column;
+    }
+  
+    .blog-sidebar {
+      order: -1; /* Move the sidebar to the top */
+      position: relative;
+      margin-bottom: 20px;
+    }
+  
+    .blog-content {
+      order: 0;
+    }
+  }
+  
