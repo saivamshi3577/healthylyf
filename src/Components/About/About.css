@@ -1,4 +1,4 @@
-/* About.css */
+
 
 .about-container {
     font-family: Arial, sans-serif;
@@ -6,7 +6,7 @@
     padding: 20px;
   }
   
-  /* Header Section */
+
   .header-section {
     display: flex;
     flex-direction: column;
@@ -57,7 +57,7 @@
     cursor: pointer;
   }
   
-  /* Eco-Friendly Section */
+ 
   .eco-section {
     background: url('https://img.freepik.com/free-photo/closeup-arisarum-vulgare-growing-ground-covered-greenery-sunlight-malta_181624-19238.jpg?uid=R140524909&ga=GA1.1.1745904934.1728549633&semt=ais_hybrid') no-repeat center center; /* Replace with your image path */
     background-size: cover;
@@ -85,9 +85,7 @@
     cursor: pointer;
   }
   
-  /* About.css */
 
-/* Add styles for images in the testimonials section */
 .testimonial-image {
   width: 100px;
   height: 100px;
@@ -96,7 +94,7 @@
   margin-bottom: 15px;
 }
 
-/* Farmers Section image styling */
+
 .farmer-image {
   width: 150px;
   height: 150px;
@@ -105,7 +103,7 @@
   margin-bottom: 15px;
 }
 
-/* Update card width for consistency */
+
 .testimonial-card, .farmer-card {
   display: flex;
   flex-direction: column;
@@ -138,7 +136,7 @@
     margin-top: 15px;
   }
   
-  /* Farmers Section */
+
   .farmers-section {
     padding: 40px 20px;
     text-align: center;
