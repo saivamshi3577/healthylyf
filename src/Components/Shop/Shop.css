@@ -1,30 +1,30 @@
-.shop-container {
+/* .shop-container {
     padding: 20px;
-    position: relative; /* Allows positioning of child elements */
-    max-width: 1200px; /* Set a maximum width for better layout on larger screens */
-    margin: 0 auto; /* Center the container */
+    position: relative; 
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .cart-icon {
-    position: sticky; /* Make it sticky */
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
-    cursor: pointer; /* Change cursor to pointer */
-    color: #ffffff; /* Set the color of the cart icon */
-    background-color: #28a745; /* Green background for visibility */
-    border-radius: 50%; /* Make it round */
-    padding: 10px; /* Add some padding */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    transition: background-color 0.3s; /* Transition for hover effect */
+    position: sticky; 
+    top: 20px; 
+    right: 20px; 
+    cursor: pointer;
+    color: #ffffff; 
+    background-color: #28a745;
+    border-radius: 50%; 
+    padding: 10px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s;
 }
 
 .cart-icon:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838; 
 }
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Adjusted minimum size */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
     gap: 20px;
 }
 
@@ -33,13 +33,13 @@
     border-radius: 8px;
     padding: 15px;
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s; /* Added shadow transition */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for cards */
+    transition: transform 0.2s, box-shadow 0.2s; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow increase on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .product-card img {
@@ -50,19 +50,19 @@
 
 .product-card h3 {
     margin: 10px 0;
-    font-size: 1.2rem; /* Adjust font size */
+    font-size: 1.2rem; 
 }
 
 .product-card p {
     font-weight: bold;
-    font-size: 1.1rem; /* Adjust font size */
+    font-size: 1.1rem; 
 }
 
 .product-card button {
     background-color: #28a745;
     color: white;
     border: none;
-    padding: 10px 15px; /* Increased padding for buttons */
+    padding: 10px 15px; 
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -70,4 +70,4 @@
 
 .product-card button:hover {
     background-color: #218838;
-}
+} */

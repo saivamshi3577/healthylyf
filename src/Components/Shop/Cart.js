@@ -1,6 +1,6 @@
-// Cart.jsx
+
 import React from 'react';
-import './Cart.css';
+// import './Cart.css';
 
 const Cart = () => {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
