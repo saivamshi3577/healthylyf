@@ -1,18 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaFacebook, FaPinterest, FaInstagram, FaBars } from 'react-icons/fa';
 import logo from '../Assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false); 
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleScroll = () => {
+    setIsSticky(window.scrollY > 0); 
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="navbar-container">
-  
+    <header className={`navbar-container ${isSticky ? 'sticky' : ''}`}>
       <div className="top-bar">
         <div className="logo">
           <img src={logo} alt="Healthy LYF Logo" />
@@ -27,8 +38,7 @@ const Navbar = () => {
           <FaBars />
         </button>
       </div>
-
-    
+      
       <nav className={`main-nav ${isOpen ? 'open' : ''}`}>
         <ul>
           <li><a href="#home">Home</a></li>

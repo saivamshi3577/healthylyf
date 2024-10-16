@@ -1,62 +1,127 @@
 
+
 .home-container {
   font-family: 'Poppins', sans-serif;
-  padding: 0;
+  background-color: #f0f4f3; 
   margin: 0;
-  background-color: #f8f9fa;
+  padding: 0;
 }
 
-.hero {
+
+.navbar {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
-  background-color: #27ae60;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 1rem;
+  position: relative;
+  z-index: 100;
+}
+
+.navbar a {
   color: white;
-}
-
-.hero-content {
-  max-width: 600px;
-}
-
-.hero img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
-}
-
-.hero button {
-  background-color: white;
-  color: #27ae60;
-  padding: 10px 20px;
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
   font-size: 1rem;
 }
 
-.hero button:hover {
-  background-color: #2ecc71;
-}
-
-/* Carousel Styling */
-.carousel .slide img {
-  width: 100%;
-  height: 600px;
-  object-fit: cover;
-}
-
-.legend {
-  font-size: 3rem;
+.hamburger {
+  cursor: pointer;
+  font-size: 1.5rem;
   color: white;
-  background: none;
-  padding: 10px;
-  text-align: center;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Product Preview Section */
+.nav-links {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  z-index: 200;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+.nav-links a {
+  color: #333;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-links a:hover {
+  background-color: #f4f4f4;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  background-color: #2e7d32; /* Deep Green */
+  color: white;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 500px;
+  z-index: 1;
+  animation: slideInLeft 1s ease-out;
+}
+
+.hero-img {
+  padding-top: 10%;
+  max-width: 60%;
+  border-radius: 15px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.hero-button {
+  background-color: white;
+  color: #2e7d32; /* Deep Green */
+  padding: 12px 24px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #81c784; /* Lighter Green */
+}
+
+/* Carousel */
+.carousel-container {
+  margin-bottom: 50px;
+  position: relative;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.carousel-slide .legend {
+  font-size: 2.5rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-shadow: 2px 2px 5px rgba(3, 0, 0, 0.7);
+}
+
+
 .product-preview {
   padding: 50px 20px;
   text-align: center;
@@ -65,133 +130,218 @@
 .sprout-card-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .sprout-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 250px; 
+  background-color: white;
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 280px;
   text-align: center;
-  flex: 1 1 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
 .sprout-card img {
-  width: 200px; 
-  height: 200px; 
+  max-width: 100%;
+  height: 180px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  border-bottom: 4px solid #2e7d32;
+  border-radius: 10px 10px 0 0;
 }
 
 .sprout-card h3 {
-  font-size: 1.2rem;
-  margin: 10px 0 5px;
+  margin: 15px 0;
+  color: #2e7d32;
 }
 
-.sprout-card p {
-  font-size: 1rem;
-  color: #666;
+.sprout-card:hover {
+  transform: translateY(-10px);
 }
 
-/* Health Benefits Section */
+/* Health Benefits */
 .health-benefits {
-  background-color: #e7f9e9;
-  padding: 50px 20px;
-  text-align: center;
+  background-color: #ffffff;
+  padding: 50px;
 }
 
 .benefit-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .benefit-item {
-  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .benefit-icon {
   font-size: 3rem;
-  color: #27ae60;
+  color: #2e7d32;
 }
 
-/* Testimonials Section */
+/* Testimonials */
 .testimonials {
-  padding: 50px 20px;
-  text-align: center;
+  padding: 50px;
+  background-color: #e8f5e9; /* Light green */
 }
 
 .testimonial-cards {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .testimonial-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
   padding: 20px;
-  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
 }
 
-/* Footer Section */
+/* Footer */
 .footer {
-  background-color: #27ae60;
+  background-color: #2e7d32;
   color: white;
-  padding: 40px 20px;
+  padding: 30px;
   text-align: center;
 }
 
-.footer input {
+.footer-content input {
   padding: 10px;
-  width: 200px;
-  border-radius: 5px;
+  border-radius: 25px;
   border: none;
+  margin: 10px;
+  width: 250px;
 }
 
-.footer button {
-  background-color: white;
-  color: #27ae60;
+.footer-content button {
   padding: 10px 20px;
   border: none;
+  background-color: #81c784;
+  border-radius: 25px;
   cursor: pointer;
-  font-size: 1rem;
-  margin-left: 10px;
-}
-
-.footer button:hover {
-  background-color: #2ecc71;
-}
-
-.footer-links {
-  margin-top: 20px;
 }
 
 .footer-links a {
   color: white;
   margin: 0 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
+/* Cards section */
+.cards-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+.card {
+  width: 30%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.how-it-works {
+  padding: 60px 20px; /* Padding for spacing */
+  background-color: #f9f9f9; /* Light background for contrast */
+  text-align: center; /* Centering the text */
+}
+
+.how-it-works h2 {
+  font-size: 2.5rem; /* Main heading size */
+  margin-bottom: 30px; /* Space below the heading */
+  color: #333; /* Dark text color for contrast */
+}
+
+.how-it-works-steps {
+  display: flex; /* Using flexbox for layout */
+  flex-direction: column; /* Vertical stacking */
+  align-items: center; /* Centering items */
+  gap: 40px; /* Space between steps */
+}
+
+.step {
+  background: white; /* White background for each step */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Padding inside the step card */
+  width: 100%; /* Full width of the container */
+  max-width: 400px; /* Max width to keep them uniform */
+  text-align: left; /* Left-aligning the text */
+}
+
+.step h3 {
+  font-size: 1.5rem; /* Step title size */
+  color: #4CAF50; /* Green color for titles */
+  margin-bottom: 10px; /* Space below the title */
+}
+
+.step p {
+  font-size: 1rem; /* Step description size */
+  color: #555; /* Darker gray for description */
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.card p {
+  padding: 0 10px;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack the hero elements vertically */
+  }
+
   .sprout-card-container {
     flex-direction: column;
     align-items: center;
   }
 
   .sprout-card {
-    width: 100%;
+    width: 100%; /* Full width on small screens */
     max-width: 300px; 
   }
 
@@ -204,4 +354,17 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .cards-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%; /* Full width for cards on small screens */
+    max-width: 500px;
+  }
 }
+
+
+

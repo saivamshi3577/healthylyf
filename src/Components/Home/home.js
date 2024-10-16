@@ -1,8 +1,8 @@
 import React from 'react';
 import './Home.css';
-import { FaLeaf, FaHeart } from 'react-icons/fa';
-import { Carousel } from 'react-responsive-carousel';  
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; 
+import { FaLeaf, FaHeart, FaCarrot, FaAppleAlt } from 'react-icons/fa';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import img1 from '../Assets/sprout1.webp';
 import img2 from '../Assets/sprout2.webp';
 import img3 from '../Assets/sprout3.webp';
@@ -12,7 +12,7 @@ import heroBanner from '../Assets/hero-banner.jpg';
 import alfalfa from '../Assets/alfalfa.jpg';
 import broccoli from '../Assets/broccoli.jpg';
 import mungbean from '../Assets/mungbean.webp';
-import radish from '../Assets/radish.jpg'; 
+import radish from '../Assets/radish.jpg';
 import clover from '../Assets/clover.jpg';
 import sunflower from '../Assets/sunflower.jpg';
 import pea from '../Assets/pea.jpg';
@@ -31,34 +31,31 @@ const quotes = [
 const Home = () => {
   return (
     <div className="home-container">
-   
       <Carousel 
         autoPlay 
         infiniteLoop 
         interval={4000} 
         showThumbs={false}
         showStatus={false}
-        dynamicHeight={false}
+        className="carousel-container"
       >
         {quotes.map((item, index) => (
-          <div key={index}>
-            <img src={item.img} alt={`Slide ${index}`} />
+          <div key={index} className="carousel-slide">
+            <img src={item.img} alt={`Slide ${index}`} className="carousel-img" />
             <p className="legend">{item.quote}</p>
           </div>
         ))}
       </Carousel>
 
-     
       <section className="hero">
         <div className="hero-content">
           <h1>Fuel Your Health with Nature's Power</h1>
           <p>Fresh Sprouts Delivered to Your Doorstep</p>
-          <button>Shop Now</button>
+          <button className="hero-button">Shop Now</button>
         </div>
         <img src={heroBanner} alt="Fresh Sprouts Banner" className="hero-img" />
       </section>
 
-      
       <section className="product-preview">
         <h2>Our Sprout Varieties</h2>
         <div className="sprout-card-container">
@@ -115,7 +112,6 @@ const Home = () => {
         </div>
       </section>
 
-  
       <section className="health-benefits">
         <h2>Health Benefits of Sprouts</h2>
         <div className="benefit-container">
@@ -129,10 +125,41 @@ const Home = () => {
             <h3>Boosts Heart Health</h3>
             <p>Loaded with fiber, helps maintain healthy cholesterol levels.</p>
           </div>
+          <div className="benefit-item">
+            <FaCarrot className="benefit-icon" />
+            <h3>Improves Digestion</h3>
+            <p>Sprouts are great for promoting digestive health.</p>
+          </div>
+          <div className="benefit-item">
+            <FaAppleAlt className="benefit-icon" />
+            <h3>Weight Management</h3>
+            <p>Low in calories, they help in weight loss and management.</p>
+          </div>
         </div>
       </section>
 
-     
+      <section className="how-it-works">
+        <h2>How It Works</h2>
+        <div className="how-it-works-steps">
+          <div className="step">
+            <h3>1. Choose Your Sprouts</h3>
+            <p>Select from a wide variety of fresh, organic sprouts.</p>
+          </div>
+          <div className="step">
+            <h3>2. Place Your Order</h3>
+            <p>Use our easy online store to place your order.</p>
+          </div>
+          <div className="step">
+            <h3>3. Fast Delivery</h3>
+            <p>Get your fresh sprouts delivered within 24-48 hours.</p>
+          </div>
+          <div className="step">
+            <h3>4. Enjoy</h3>
+            <p>Incorporate healthy sprouts into your daily diet.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="testimonials">
         <h2>What Our Customers Say</h2>
         <div className="testimonial-cards">
@@ -144,9 +171,12 @@ const Home = () => {
             <p>"A great addition to my daily diet. Highly recommend!"</p>
             <h4>- Customer 2</h4>
           </div>
+          <div className="testimonial-card">
+            <p>"The quality is unmatched. I love the convenience of fresh sprouts delivered to my home."</p>
+            <h4>- Customer 3</h4>
+          </div>
         </div>
       </section>
-
 
       <footer className="footer">
         <div className="footer-content">
