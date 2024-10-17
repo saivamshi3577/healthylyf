@@ -50,7 +50,7 @@ const Contact = () => {
     <div className="contact-page">
       <div className="contact-banner">
         <img
-          src="https://img.freepik.com/free-photo/contact-register-feedback-support-help-concept_53876-124243.jpg?uid=R140524909&ga=GA1.1.1745904934.1728549633&semt=ais_hybrid" // Use your preferred image
+          src="https://img.freepik.com/free-photo/woman-holding-white-phone-female-hands-using-smartphone-close-up_1163-4339.jpg?t=st=1729190457~exp=1729194057~hmac=c8e42cd1b1c926f104440ae7b074a738270814294a4d1b409404189e86c0a968&w=996" 
           alt="Healthy Lyf Franchise"
           className="contact-banner-image"
         />

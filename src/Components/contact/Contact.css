@@ -24,6 +24,7 @@
     align-items: center;
     background-color: #f9f9f9;
     margin-bottom: 30px;
+    
   }
   
   .contact-banner-image {
@@ -34,13 +35,14 @@
     top: 0;
     left: 0;
     z-index: 1;
+
   }
   
   .quote {
     position: relative;
     z-index: 2;
     text-align: center;
-    color: #ffffff;
+    color: green;
   }
   
   .quote h1 {
