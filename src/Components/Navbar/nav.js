@@ -43,7 +43,9 @@ const Navbar = () => {
     <header className={`navbar-container ${isSticky ? 'sticky' : ''}`}>
       <div className="top-bar">
         <div className="logo">
-          <img src={logo} alt="Healthy LYF Logo" />
+        <Link to="/">
+          <img src={logo}  alt="Healthy LYF Logo" />
+          </Link>
         </div>
         <div className="social-icons">
           <FaTwitter />
